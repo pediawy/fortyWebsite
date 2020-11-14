@@ -1,0 +1,622 @@
+:root {
+  --main-color: #2a2f4a;
+  --second-color: #48bfd4;
+}
+body {
+  background-color: var(--main-color);
+}
+/* General Usage */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.btn-transparent,
+.btn-white {
+  display: inline-block;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: 5px;
+  background-color: #fff;
+  padding: 10px 0;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: 2px solid #fff;
+}
+.btn-white {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.btn-transparent:focus {
+  outline: 0;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+.btn-white:focus {
+  border: 2px solid #fff;
+  outline: 0;
+}
+.btn-transparent:hover,
+.btn-transparent:active {
+  background-color: var(--second-color);
+  color: #fff;
+  border: 2px solid var(--second-color);
+}
+.btn-white:hover {
+  color: var(--second-color);
+  border: 2px solid var(--second-color);
+}
+
+.btn-large {
+  width: 100%;
+}
+.btn-medium {
+  width: auto;
+  padding: 10px 20px;
+}
+
+/* End Gerneral Usage */
+
+.navbar {
+  color: #fff;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.75s ease;
+}
+.navbar .navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .nav-logo {
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+.navbar .nav-logo span {
+  background-color: #fff;
+  color: #333;
+  padding: 3px 10px;
+}
+.navbar .nav-item {
+  float: right;
+  cursor: pointer;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 99999;
+  transition: all 1s ease;
+}
+.menu .btnClose {
+  position: absolute;
+  font-size: 50px;
+  right: 30px;
+  top: -10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu .overlay {
+  position: absolute;
+  background-color: var(--main-color);
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  opacity: 0.98;
+  z-index: 99;
+}
+.menu-list {
+  width: 20%;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .menu-list {
+    width: 80%;
+    z-index: 100;
+  }
+  .menu .btnClose {
+    font-size: 30px;
+    top: 5px;
+  }
+}
+.menu-list .list-item {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  margin-top: 20px;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+.menu-list button {
+  margin-top: 20px;
+}
+.menu .list-item > a {
+  transition: all 0.25s ease;
+  color: #fff;
+}
+.menu .list-item > a:hover {
+  text-decoration: none;
+  color: #48bfd4;
+}
+/* Start Home Section */
+
+.interface {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(
+      rgba(42, 47, 74, 0.5),
+      rgba(42, 47, 74, 0.5)
+    ),
+    url("../images/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.interface .infoBox {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+.interface .infoBox h3 {
+  color: #fff;
+  font-size: 50px;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0 25px 0;
+  margin-bottom: 40px;
+}
+
+.interface .infoBox div {
+  font-size: 13px;
+  color: #fff;
+  padding: 0px 0px 10px 0px;
+}
+@media screen and (max-width: 768px) {
+  .interface .infoBox {
+    width: 89%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .interface .infoBox h3 {
+    font-size: 30px;
+    display: inline-block;
+    margin: auto;
+  }
+  .interface .infoBox div {
+    margin: 20px auto 30px auto;
+    padding: 0px 0px 10px 0px;
+  }
+  .interface .infoBox button {
+    margin: auto;
+  }
+}
+/* Start works Section */
+.work .workCard {
+  height: 60vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 50px;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.57s ease;
+}
+.work .firstLine .workCard:first-child {
+  background-image: url("../images/cards/1.jpg");
+}
+.work .firstLine .workCard:last-child {
+  background-image: url("../images/cards/2.jpg");
+}
+.work .secondLine .workCard:first-child {
+  background-image: url("../images/cards/3.jpg");
+}
+.work .secondLine .workCard:last-child {
+  background-image: url("../images/cards/4.jpg");
+}
+.work .thirdLine .workCard:first-child {
+  background-image: url("../images/cards/5.png");
+}
+.work .thirdLine .workCard:last-child {
+  background-image: url("../images/cards/6.jpg");
+}
+.work .workCard:hover {
+  background-position: 35% 60%;
+}
+.work .workCard .cardHeader,
+.work .workCard .cardText {
+  position: relative;
+  color: #fff;
+  z-index: 99;
+}
+.work .workCard .cardHeader {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+.work .workCard:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: all 0.57s ease;
+}
+.work .firstLine .workCard:first-child::after {
+  background-color: var(--second-color);
+}
+.work .firstLine .workCard:last-child::after {
+  background-color: var(--main-color);
+}
+.work .secondLine .workCard:first-child::after {
+  background-color: #d3581f;
+}
+.work .secondLine .workCard:last-child::after {
+  background-color: #d69710;
+}
+.work .thirdLine .workCard:first-child::after {
+  background-color: #176da7;
+}
+.work .thirdLine .workCard:last-child::after {
+  background-color: #259963f3;
+}
+
+.work .workCard:hover::after {
+  opacity: 0;
+  width: 0;
+}
+@media screen and (max-width: 768px) {
+  .work .workCard {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+/* start AboutUs section */
+.aboutUs {
+  background-color: var(--main-color);
+  padding: 30px 0;
+}
+
+.aboutUs .infoBox {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+.aboutUs .infoBox h3 {
+  display: inline-block;
+  color: #fff;
+  font-size: 50px;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0 25px 0;
+  margin-bottom: 20px;
+}
+.aboutUs .infoBox div {
+  position: relative;
+  top: 6px;
+  left: 0;
+  font-size: 15px;
+  color: #fff;
+  padding: 0px 0px;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 768px) {
+  .aboutUs .infoBox h3 {
+    font-size: 30px;
+  }
+  .aboutUs .infoBox button {
+    margin: auto;
+  }
+  .aboutUs .infoBox div {
+    margin-bottom: 20px;
+  }
+}
+/* start ContactUS Section */
+.contactUs {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 50px 0;
+}
+.contactUs .container {
+  padding: 0;
+}
+.contactUs .contactForm {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.contactUs .contactForm label {
+  display: block;
+  font-size: 14px;
+}
+.contactUs .contactForm .contactName {
+  width: 100%;
+}
+.contactUs .contactForm input {
+  display: inline-block;
+  width: 95%;
+  height: 50px;
+  background-color: #353f7a;
+  outline: 0;
+  border: 0;
+  color: #fff;
+}
+.contactUs .contactForm .contactName:last-child input:last-child {
+  width: 100%;
+}
+.contactUs button {
+  margin: 20px 10px 13px 0 0;
+}
+.contactUs textarea {
+  width: 100%;
+  height: 200px;
+  display: block;
+  background-color: #353f7a;
+  border: 0;
+  margin-top: 30px;
+  color: #fff;
+}
+textarea:focus {
+  outline: 0;
+}
+.contactUs button {
+  margin: 20px 30px 0 0;
+}
+.contactUs .contactInfo {
+  padding-top: 10px;
+}
+.contactInfo li {
+  padding: 14px 0px;
+  border-bottom: 1px solid #353f7a;
+}
+@media screen and (max-width: 768px) {
+  .contactUs .contactInfo {
+    margin-bottom: 0;
+  }
+
+  .contactUs .contactInfo li:first-child {
+    padding-top: 30px;
+  }
+  .contactUs .contactInfo:last-child {
+    padding: 0;
+  }
+  .contactUs {
+    padding: 20px 0 0 0;
+  }
+}
+/* Footer */
+.footer {
+  background-color: var(--main-color);
+  color: #fff;
+  height: 100px;
+  font-size: 30px;
+}
+.footer .social {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.footer .social li {
+  margin-right: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.footer .social li:hover {
+  color: var(--second-color);
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .social {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+/* React components Animation */
+
+.fade-enter,
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+/* ********** */
+
+/* Start Landing Section */
+.landing {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      rgba(88, 44, 105, 0.9),
+      rgba(159, 82, 189, 0.938)
+    ),
+    url("../images/landing.jpg");
+}
+.landing .infoBox {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+.landing .infoBox h3 {
+  color: #fff;
+  font-size: 50px;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0 25px 0;
+  margin-bottom: 20px;
+}
+.landing .infoBox div {
+  position: relative;
+  top: 6px;
+  left: 0;
+  font-size: 13px;
+  color: #fff;
+  padding: 0px 0px;
+}
+@media screen and (max-width: 768px) {
+  .landing .infoBox {
+    width: 89%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .landing .infoBox h3 {
+    font-size: 40px;
+    display: block;
+    margin: auto;
+  }
+  .landing .infoBox div {
+    margin: 10px auto;
+  }
+}
+/* :::::::::: */
+.generic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  background-color: var(--main-color);
+  padding-top: 100px;
+}
+.generic .generic-img-container {
+  overflow: hidden;
+  width: 100%;
+  height: 40vh;
+  background-image: url(../images/generic.jpg);
+  background-size: cover;
+}
+
+.generic .infoBox {
+  display: block;
+  position: relative;
+  width: 73%;
+  margin: auto;
+}
+.generic .infoBox h3 {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0 25px 0;
+}
+.generic .infoBox div {
+  position: relative;
+  top: 6px;
+  left: 0;
+  font-size: 16px;
+  color: #fff;
+  padding: 0px 0px;
+  margin: 10px auto;
+}
+.generic .infoBox div p {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .generic .infoBox {
+    width: 89%;
+  }
+}
+
+/* Features Section */
+/* Start works Section */
+.features .featPhotoCard {
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.features .firstLine .featPhotoCard {
+  background-image: url(../images/feat1.jpg);
+}
+.features .secondLine .featPhotoCard {
+  background-image: url(../images/feat2.jpg);
+}
+.features .thirdLine .featPhotoCard {
+  background-image: url(../images/feat3.jpg);
+}
+.features .featCard {
+  background-color: #2e3450;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 30px 0;
+}
+.features .featCard .infoBox {
+  width: 90%;
+  margin: auto;
+}
+.features .featCard:nth-child(1) {
+  background-color: var(--main-color);
+}
+.features .featCard h3 {
+  display: inline-block;
+  color: #fff;
+  font-size: 30px;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0 25px 0;
+  margin-bottom: 20px;
+}
+.features .featCard div {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .features .secondLine {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .features .featCard {
+    padding: 20px 0;
+  }
+}
